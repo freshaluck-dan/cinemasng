@@ -5,9 +5,12 @@ async function getImage(req, res) {
   const imageName = req.body.image; // Retrieve the image name from the request parameters
   console.log(imageName);
   // const imagePath = path.join(__dirname, "uploads/", imageName); // Set the path to the image file
-  const filePath =
-    "/home/freshaluck/programming/personalWork/cinemasngBackend/uploads/" +
-    imageName;
+  // const filePath =
+  //   "/home/freshaluck/programming/personalWork/cinemasngBackend/uploads/" +
+  //   imageName;
+
+  const filePath = "/home/cinejqzm/nodejs/flyer/uploads/" + imageName;
+
   const imagePath = path.resolve(filePath);
 
   fs.readFile(imagePath, (error, data) => {
